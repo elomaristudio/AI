@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>خالد العمري | Elomari Studio AI</title>
+    <!-- استدعاء أيقونات Font Awesome وبطاقات خطوط جوجل -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -158,7 +159,7 @@
         }
 
         .social-icon {
-            font-size: 22px;
+            font-size: 24px;
             color: var(--text-muted);
             transition: var(--transition);
             text-decoration: none;
@@ -171,19 +172,15 @@
             border-radius: 50%;
         }
 
-        .social-icon i {
-            transition: var(--transition);
-        }
-
-        .social-icon:hover i {
+        .social-icon:hover {
+            transform: translateY(-3px);
             color: white;
-            transform: scale(1.1);
         }
 
-        .social-icon.whatsapp-btn:hover { background-color: #25D366; }
-        .social-icon.facebook-btn:hover { background-color: #1877F2; }
-        .social-icon.tiktok-btn:hover { background-color: #000000; }
-        .social-icon.youtube-btn:hover { background-color: #FF0000; }
+        .social-icon.fa-whatsapp:hover { background-color: #25D366; }
+        .social-icon.fa-facebook:hover { background-color: #1877F2; }
+        .social-icon.fa-tiktok:hover { background-color: #000000; }
+        .social-icon.fa-youtube:hover { background-color: #FF0000; }
 
         /* التذييل */
         .footer {
@@ -202,6 +199,7 @@
 
     <div class="container">
         
+        <!-- القسم التعريفي الرئيسي -->
         <div class="profile-section">
             <div class="avatar-container">
                 <i class="fa-solid fa-wand-magic-sparkles"></i>
@@ -210,20 +208,24 @@
             <p>رائد أعمال رقمي وصانع محتوى | Elomari Studio AI</p>
         </div>
 
+        <!-- أزرار المواقع والمشاريع الرئيسية -->
         <div class="links-wrapper">
             
+            <!-- متجر مناحل الشاوية -->
             <a href="https://manahelchaouia.com" target="_blank" class="link-card featured-store">
                 <i class="fa-solid fa-jar icon-main"></i>
                 <span>متجر مناحل الشاوية الإلكتروني</span>
                 <i class="fa-solid fa-chevron-left icon-arrow"></i>
             </a>
 
+            <!-- المدونة الشخصية والمقالات -->
             <a href="#" target="_blank" class="link-card">
                 <i class="fa-solid fa-blog icon-main"></i>
                 <span>المدونة الشخصية والمقالات</span>
                 <i class="fa-solid fa-chevron-left icon-arrow"></i>
             </a>
 
+            <!-- خدمات Elomari Studio AI -->
             <a href="#" target="_blank" class="link-card">
                 <i class="fa-solid fa-clapperboard icon-main"></i>
                 <span>خدمات Elomari Studio AI وصناعة المحتوى</span>
@@ -232,24 +234,22 @@
 
         </div>
 
+        <!-- أزرار وسائل التواصل الاجتماعي السريعة ومتابعة الحسابات -->
         <div class="social-grid">
-            <a href="https://wa.me/212660033214" target="_blank" class="social-icon whatsapp-btn" title="واتساب المباشر">
-                <i class="fa-brands fa-whatsapp"></i>
-            </a>
+            <!-- رابط الواتساب المباشر -->
+            <a href="https://wa.me/212660033214" target="_blank" class="social-icon fa-brands fa-whatsapp" title="واتساب المباشر"></a>
             
-            <a href="https://www.facebook.com/share/1Fa6LB9zEQ/" target="_blank" class="social-icon facebook-btn" title="فيسبوك">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
+            <!-- رابط صفحة الفيسبوك -->
+            <a href="https://www.facebook.com/share/1Fa6LB9zEQ/" target="_blank" class="social-icon fa-brands fa-facebook" title="فيسبوك"></a>
             
-            <a href="https://www.tiktok.com/@elomari_studio_ai" target="_blank" class="social-icon tiktok-btn" title="تيك توك">
-                <i class="fa-brands fa-tiktok"></i>
-            </a>
+            <!-- رابط حساب التيك توك -->
+            <a href="https://www.tiktok.com/@elomari_studio_ai" target="_blank" class="social-icon fa-brands fa-tiktok" title="تيك توك"></a>
             
-            <a href="https://youtube.com/@elomari_studio_ai" target="_blank" class="social-icon youtube-btn" title="يوتيوب">
-                <i class="fa-brands fa-youtube"></i>
-            </a>
+            <!-- رابط قناة اليوتيوب -->
+            <a href="https://youtube.com/@elomari_studio_ai" target="_blank" class="social-icon fa-brands fa-youtube" title="يوتيوب"></a>
         </div>
 
+        <!-- التذييل -->
         <div class="footer">
             <p>© 2026 Elomari Studio AI. جميع الحقوق محفوظة.</p>
             <p>صُنع بكل حُب واحترافية بدعم الذكاء الاصطناعي ✨</p>
