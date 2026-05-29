@@ -1,269 +1,101 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>خالد العمري | Elomari Studio AI</title>
-    <!-- استدعاء أيقونات Font Awesome وبطاقات خطوط جوجل -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --bg-color: #f8f9fa;
-            --card-bg: #ffffff;
-            --text-main: #2d3748;
-            --text-muted: #718096;
-            --primary-gold: #bba15c; /* لمسة ذهبية تناسب الهوية المغربية الرقمية */
-            --primary-hover: #a38948;
-            --shadow: 0 4px 15px rgba(0,0,0,0.05);
-            --transition: all 0.3s ease;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>خالد العماري | Elomari Studio AI</title>
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Cairo', sans-serif;
-        }
+<style>
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
+body{
+    margin:0;
+    font-family:Tahoma, Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+}
 
-        .container {
-            width: 100%;
-            max-width: 520px;
-            text-align: center;
-            background: var(--card-bg);
-            padding: 40px 25px;
-            border-radius: 24px;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(0,0,0,0.02);
-        }
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    padding:40px 20px;
+}
 
-        /* الهيدر والصورة الشخصية */
-        .profile-section {
-            margin-bottom: 35px;
-        }
+.profile-image{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #fbbf24;
+    display:block;
+    margin:0 auto 25px;
+    box-shadow:0 0 30px rgba(251,191,36,.4);
+}
 
-        .avatar-container {
-            width: 140px;
-            height: 140px;
-            margin: 0 auto 15px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-gold), #e2d1a6);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 10px rgba(187, 161, 92, 0.2);
-            overflow: hidden;
-        }
+h1{
+    color:#fbbf24;
+    font-size:3rem;
+    margin-bottom:10px;
+}
 
-        .profile-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-        }
+.subtitle{
+    color:#cbd5e1;
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
 
-        .avatar-container i {
-            font-size: 45px;
-            color: white;
-        }
+.btn{
+    display:inline-block;
+    margin:10px;
+    padding:15px 30px;
+    background:#fbbf24;
+    color:#000;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+}
 
-        .profile-section h1 {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--text-main);
-            margin-bottom: 5px;
-        }
+.btn:hover{
+    opacity:.9;
+}
 
-        .profile-section p {
-            font-size: 14px;
-            color: var(--text-muted);
-            font-weight: 400;
-            margin-bottom: 15px;
-        }
-
-        /* الروابط والأزرار الرئيسيّة */
-        .links-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-bottom: 35px;
-        }
-
-        .link-card {
-            display: flex;
-            align-items: center;
-            background: var(--bg-color);
-            padding: 16px 20px;
-            border-radius: 14px;
-            text-decoration: none;
-            color: var(--text-main);
-            font-weight: 600;
-            font-size: 16px;
-            transition: var(--transition);
-            border: 1px solid rgba(0, 0, 0, 0.03);
-            position: relative;
-        }
-
-        .link-card i.icon-main {
-            font-size: 20px;
-            width: 35px;
-            text-align: right;
-            transition: var(--transition);
-        }
-
-        .link-card span {
-            flex-grow: 1;
-            text-align: right;
-        }
-
-        .link-card i.icon-arrow {
-            font-size: 14px;
-            color: var(--text-muted);
-            opacity: 0.5;
-            transition: var(--transition);
-        }
-
-        /* تأثيرات التحويم والتخصيص لروابط المشاريع الخاصة */
-        .link-card:hover {
-            transform: translateY(-2px);
-            background: #fff;
-            border-color: var(--primary-gold);
-            box-shadow: 0 4px 12px rgba(187, 161, 92, 0.1);
-        }
-
-        .link-card:hover i.icon-main {
-            color: var(--primary-gold);
-        }
-
-        /* تمييز خاص لمتجر مناحل الشاوية */
-        .featured-store {
-            background: linear-gradient(135deg, #fffcf4, #fff9e6);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-        }
-        .featured-store i.icon-main {
-            color: #d4af37;
-        }
-
-        /* شبكة التواصل الاجتماعي السفلى */
-        .social-grid {
-            display: flex;
-            justify-content: center;
-            gap: 18px;
-            margin-bottom: 25px;
-            flex-wrap: wrap;
-        }
-
-        .social-icon {
-            font-size: 24px;
-            color: var(--text-muted);
-            transition: var(--transition);
-            text-decoration: none;
-            width: 45px;
-            height: 45px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: var(--bg-color);
-            border-radius: 50%;
-        }
-
-        .social-icon:hover {
-            transform: translateY(-3px);
-            color: white;
-        }
-
-        .social-icon.fa-whatsapp:hover { background-color: #25D366; }
-        .social-icon.fa-facebook:hover { background-color: #1877F2; }
-        .social-icon.fa-tiktok:hover { background-color: #000000; }
-        .social-icon.fa-youtube:hover { background-color: #FF0000; }
-
-        /* التذييل */
-        .footer {
-            font-size: 12px;
-            color: var(--text-muted);
-            border-top: 1px solid rgba(0,0,0,0.05);
-            padding-top: 20px;
-        }
-
-        .footer p {
-            margin-bottom: 5px;
-        }
-    </style>
+</style>
 </head>
+
 <body>
 
-    <div class="container">
-        
-        <!-- القسم التعريفي الرئيسي -->
-        <div class="profile-section">
-            <div class="avatar-container">
-                <img src="profile.jpg" alt="خالد العمري" class="profile-image">
-            </div>
-            <h1>خالد العمري</h1>
-            <p>رائد أعمال رقمي وصانع محتوى | Elomari Studio AI</p>
-        </div>
+<section class="hero">
 
-        <!-- أزرار المواقع والمشاريع الرئيسية -->
-        <div class="links-wrapper">
-            
-            <!-- متجر مناحل الشاوية -->
-            <a href="https://manahelchaouia.com" target="_blank" class="link-card featured-store">
-                <i class="fa-solid fa-jar icon-main"></i>
-                <span>متجر مناحل الشاوية الإلكتروني</span>
-                <i class="fa-solid fa-chevron-left icon-arrow"></i>
-            </a>
+<div>
 
-            <!-- المدونة الشخصية والمقالات -->
-            <a href="#" target="_blank" class="link-card">
-                <i class="fa-solid fa-blog icon-main"></i>
-                <span>المدونة الشخصية والمقالات</span>
-                <i class="fa-solid fa-chevron-left icon-arrow"></i>
-            </a>
+<img src="96355.png"
+     alt="خالد العماري"
+     class="profile-image">
 
-            <!-- خدمات Elomari Studio AI -->
-            <a href="#" target="_blank" class="link-card">
-                <i class="fa-solid fa-clapperboard icon-main"></i>
-                <span>خدمات Elomari Studio AI وصناعة المحتوى</span>
-                <i class="fa-solid fa-chevron-left icon-arrow"></i>
-            </a>
+<h1>خالد العماري</h1>
 
-        </div>
+<p class="subtitle">
+مؤسس Elomari Studio AI ومناحل الشاوية
+</p>
 
-        <!-- أزرار وسائل التواصل الاجتماعي السريعة ومتابعة الحسابات -->
-        <div class="social-grid">
-            <!-- رابط الواتساب المباشر -->
-            <a href="https://wa.me/212660033214" target="_blank" class="social-icon fa-brands fa-whatsapp" title="واتساب المباشر"></a>
-            
-            <!-- رابط صفحة الفيسبوك -->
-            <a href="https://www.facebook.com/share/1Fa6LB9zEQ/" target="_blank" class="social-icon fa-brands fa-facebook" title="فيسبوك"></a>
-            
-            <!-- رابط حساب التيك توك -->
-            <a href="https://www.tiktok.com/@elomari_studio_ai" target="_blank" class="social-icon fa-brands fa-tiktok" title="تيك توك"></a>
-            
-            <!-- رابط قناة اليوتيوب -->
-            <a href="https://youtube.com/@elomari_studio_ai" target="_blank" class="social-icon fa-brands fa-youtube" title="يوتيوب"></a>
-        </div>
+<a href="https://manahelchaouia.com/" class="btn" target="_blank">
+🍯 متجر مناحل الشاوية
+</a>
 
-        <!-- التذييل -->
-        <div class="footer">
-            <p>© 2026 Elomari Studio AI. جميع الحقوق محفوظة.</p>
-            <p>صُنع بكل حُب واحترافية بدعم الذكاء الاصطناعي ✨</p>
-        </div>
+<a href="https://elomaristudioai.blogspot.com" class="btn" target="_blank">
+🚀 Elomari Studio AI
+</a>
 
-    </div>
+<a href="https://wa.me/212660033214" class="btn" target="_blank">
+💬 واتساب
+</a>
+
+</div>
+
+</section>
 
 </body>
 </html>
